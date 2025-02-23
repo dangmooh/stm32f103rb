@@ -23,8 +23,6 @@
 
 #include "stm32f1xx_hal.h"
 
-
-
 void bspInit(void);
 
 //공통으로 사용하는 함수 정의

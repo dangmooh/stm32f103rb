@@ -21,7 +21,7 @@
 #include "usbd_dfu_if.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+#include "flash.h"
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,7 +61,7 @@
   * @{
   */
 
-#define FLASH_DESC_STR      "@Internal Flash   /0x08000000/03*016Ka,01*016Kg,01*064Kg,07*128Kg,04*016Kg,01*064Kg,07*128Kg"
+#define FLASH_DESC_STR      "@Internal Flash   /0x08000000/128*01Ka,128*01Kg"
 
 /* USER CODE BEGIN PRIVATE_DEFINES */
 
@@ -174,9 +174,14 @@ uint16_t MEM_If_DeInit_FS(void)
   * @param  Add: Address of sector to be erased.
   * @retval 0 if operation is successful, MAL_FAIL else.
   */
-uint16_t MEM_If_Erase_FS(uint32_t Add)
+uint16_t MEM_If_Erase_FS(uint32_t Add) // sector 1개를 지운다.
 {
   /* USER CODE BEGIN 2 */
+
+  if (flashErase(Add, 1024) != true)
+  {
+    return 1;
+  }
 
   return (USBD_OK);
   /* USER CODE END 2 */
@@ -192,6 +197,12 @@ uint16_t MEM_If_Erase_FS(uint32_t Add)
 uint16_t MEM_If_Write_FS(uint8_t *src, uint8_t *dest, uint32_t Len)
 {
   /* USER CODE BEGIN 3 */
+
+  if (flashWrite((uint32_t)dest, src, Len) != true)
+  {
+    return 1;
+  }
+
   return (USBD_OK);
   /* USER CODE END 3 */
 }
@@ -207,7 +218,14 @@ uint8_t *MEM_If_Read_FS(uint8_t *src, uint8_t *dest, uint32_t Len)
 {
   /* Return a valid address to avoid HardFault */
   /* USER CODE BEGIN 4 */
-  return (uint8_t*)(USBD_OK);
+
+  for (int i=0; i<Len; i++)
+  {
+    dest[i] = src[i];
+  }
+
+
+  return (uint8_t*)(dest);
   /* USER CODE END 4 */
 }
 
@@ -224,12 +242,16 @@ uint16_t MEM_If_GetStatus_FS(uint32_t Add, uint8_t Cmd, uint8_t *buffer)
   switch (Cmd)
   {
     case DFU_MEDIA_PROGRAM:
-
+      buffer[1] = (50 >> 0);
+      buffer[2] = (50 >> 8);
+      buffer[3] = 0;
     break;
 
     case DFU_MEDIA_ERASE:
     default:
-
+      buffer[1] = (50 >> 0); // flash program time = 50
+      buffer[2] = (50 >> 8);
+      buffer[3] = 0;
     break;
   }
   return (USBD_OK);
