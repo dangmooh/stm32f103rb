@@ -26,7 +26,7 @@ void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 �
   pre_time = millis();
   while(1)
   {
-    if (millis() - pre_time >= 500)
+    if (millis() - pre_time >= 100)
     {
       pre_time = millis();
       ledToggle(_DEF_LED1);
