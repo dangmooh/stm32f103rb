@@ -1,6 +1,6 @@
 ../src/hw/driver/uart.c:27:6:uartInit	2
 ../src/hw/driver/uart.c:37:6:uartOpen	5
-../src/hw/driver/uart.c:103:10:uartAbailable	3
+../src/hw/driver/uart.c:103:10:uartAvailable	3
 ../src/hw/driver/uart.c:121:9:uartRead	3
 ../src/hw/driver/uart.c:139:11:uartWrite	4
 ../src/hw/driver/uart.c:163:11:uartPrintf	1

@@ -35,7 +35,8 @@ src/ap/ap.o: ../src/ap/ap.c ../src/ap/ap.h \
  D:/exam_arm/stm32f103_fw/src/hw/hw_def.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/rtc.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h \
- D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h
+ D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h \
+ D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h
 ../src/ap/ap.h:
 D:/exam_arm/stm32f103_fw/src/hw/hw.h:
 D:/exam_arm/stm32f103_fw/src/hw/hw_def.h:
@@ -74,3 +75,4 @@ D:/exam_arm/stm32f103_fw/src/hw/hw_def.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/rtc.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h:
+D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h:
