@@ -100,7 +100,7 @@ bool uartOpen(uint8_t ch, uint32_t baud)
 
   return ret;
 }
-uint32_t uartAbailable(uint8_t ch) // recieve data가 존재하는지
+uint32_t uartAvailable(uint8_t ch) // recieve data가 존재하는지
 {
   uint32_t ret = 0;
   switch(ch)

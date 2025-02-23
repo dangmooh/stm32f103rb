@@ -34,6 +34,63 @@ void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 �
 
       //logPrintf("logPrintf test %d\n", (int)millis());
     }
+
+    if (uartAvailable(_DEF_UART1) >0)
+    {
+      uint8_t rx_data;
+
+      rx_data = uartRead(_DEF_UART1);
+
+      if (rx_data == '1')
+      {
+        uint8_t buf[32];
+
+        logPrintf("Read... \n");
+
+        flashRead(0x8000000 + (120*1024), buf, 32); // 시작 주소 0x8000000 + (120*1024) 에서 32byte를 읽어온다.
+
+        for (int i=0; i<32; i++)
+        {
+          logPrintf("0x%X : 0x%X\n", 0x8000000 + (120*1024) + i, buf[i]); // 32byte를 화면에 출력한다.
+        }
+      }
+
+      if (rx_data == '2')
+      {
+        logPrintf("Erase... \n");
+
+        if (flashErase(0x8000000 + (120*1024), 32) == true) // 시작 주소 0x8000000 + (120*1024) 에서 32byte를 지운다.
+        {
+          logPrintf("Erase OK \n");
+        }
+        else
+        {
+          logPrintf("Erase Fail \n");
+        }
+      }
+
+      if (rx_data == '3')
+      {
+        uint8_t buf[32];
+
+        for (int i=0; i<32; i++)
+        {
+          buf[i] = i;
+        }
+
+        logPrintf("Write... \n");
+
+        if (flashWrite(0x8000000 + (120*1024), buf, 32) == true) // 시작 주소 0x8000000 + (120*1024) 에서 32byte를 쓴다.
+        {
+          logPrintf("Write OK \n");
+        }
+        else
+        {
+          logPrintf("Write Fail \n");
+        }
+      }
+
+    }
   }
 }
 

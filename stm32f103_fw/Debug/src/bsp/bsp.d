@@ -39,7 +39,8 @@ src/bsp/bsp.o: ../src/bsp/bsp.c ../src/bsp/bsp.h \
  D:/exam_arm/stm32f103_fw/src/hw/hw_def.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/rtc.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h \
- D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h
+ D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h \
+ D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h
 ../src/bsp/bsp.h:
 D:/exam_arm/stm32f103_fw/src/common/def.h:
 D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -83,3 +84,4 @@ D:/exam_arm/stm32f103_fw/src/hw/hw_def.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/rtc.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h:
+D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h:
