@@ -23,11 +23,21 @@ void apInit(void)
 void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 진행한다.
 {
   uint32_t pre_time;
-
+  uint16_t target = 500;
   pre_time = millis();
   while(1)
   {
-    if (millis() - pre_time >= 500)
+    if (millis() - pre_time >= target)
+    {
+      pre_time = millis();
+      ledToggle(_DEF_LED1);
+    }
+    if (buttonGetPressed(_DEF_BUTTON1) == true)
+    {
+      target = 200;
+    }
+
+    /*if (millis() - pre_time >= 500)
     {
       pre_time = millis();
       ledToggle(_DEF_LED1);
@@ -90,7 +100,7 @@ void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 �
         }
       }
 
-    }
+    }*/
   }
 }
 
