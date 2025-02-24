@@ -17,6 +17,7 @@
 #include "reset.h"
 #include "uart.h"
 #include "flash.h"
+#include "button.h"
 
 void hwInit(void);
 

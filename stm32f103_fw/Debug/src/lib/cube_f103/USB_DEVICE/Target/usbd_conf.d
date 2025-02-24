@@ -41,6 +41,7 @@ src/lib/cube_f103/USB_DEVICE/Target/usbd_conf.o: \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h \
  D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h \
+ D:/exam_arm/stm32f103_fw/src/common/hw/include/button.h \
  D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
@@ -90,6 +91,7 @@ D:/exam_arm/stm32f103_fw/src/common/hw/include/rtc.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/reset.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/uart.h:
 D:/exam_arm/stm32f103_fw/src/common/hw/include/flash.h:
+D:/exam_arm/stm32f103_fw/src/common/hw/include/button.h:
 D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 D:/exam_arm/stm32f103_fw/src/lib/cube_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:

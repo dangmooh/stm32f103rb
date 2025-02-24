@@ -20,4 +20,6 @@ void hwInit(void)
   resetInit();
   ledInit();
   flashInit();
+  buttonInit();
+
 }

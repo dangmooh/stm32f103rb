@@ -20,6 +20,7 @@ void bspInit(void)
 
   __HAL_RCC_GPIOA_CLK_ENABLE(); // gpio 수정시 복사
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE(); // gpio 수정시 복사
 
   //MX_USB_DEVICE_Init();
 
