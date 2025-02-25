@@ -10,19 +10,36 @@
 
 
 
-
+void led_isr(void *arg)
+{
+  ledToggle(_DEF_LED1);
+}
 
 void apInit(void)
 {
+  swtimer_handle_t h_led_timer;
 
+  h_led_timer = swtimerGetHandle();
+  swtimerSet(h_led_timer, 500, LOOP_TIME, led_isr, NULL);
+  swtimerStart(h_led_timer);
 }
 
 // gcc 계열에서 printf 함수를 사용하려면 syscallback 추가하면 된다.
 
 void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 진행한다.
 {
-  uint32_t pre_time;
+  while(1)
+  {
+
+  }
+}
+
+
+
+/* button
+ * uint32_t pre_time;
   uint16_t target = 500;
+
   pre_time = millis();
   while(1)
   {
@@ -35,10 +52,7 @@ void apMain(void) //main.c를 최소화하고 ap에서 모든 상위 작업을 �
     {
       target = 100;
     }
-  }
-}
-
-
+  }*/
 
 
 /* reset count led blink example

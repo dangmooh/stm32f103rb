@@ -12,14 +12,12 @@ typedef struct
 {
   GPIO_TypeDef *port;
   uint16_t      pin;
-  GPIO_PinState on_state;
-  GPIO_PinState off_state;
 } button_tbl_t;
 
 
 button_tbl_t button_tbl[BUTTON_MAX_CH] =
     {
-        {GPIOC, GPIO_PIN_13, GPIO_PIN_RESET, GPIO_PIN_SET}
+        {GPIOC, GPIO_PIN_13}
     };
 
 void buttonInit(void)

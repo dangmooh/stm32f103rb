@@ -18,6 +18,8 @@
 #include "uart.h"
 #include "flash.h"
 #include "button.h"
+#include "swtimer.h"
+
 
 void hwInit(void);
 

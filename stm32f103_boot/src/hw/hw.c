@@ -21,5 +21,5 @@ void hwInit(void)
   ledInit();
   flashInit();
   buttonInit();
-
+  swtimerInit();
 }
