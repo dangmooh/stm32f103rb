@@ -35,6 +35,7 @@ uint32_t millis(void)
 {
   return HAL_GetTick(); //sysTick에서 증가하는 uwTick 값을 가져옴
 }
+
 int __io_putchar(int ch) // printf 호출 시 하나의 charactor를 보낸다.
 {
   return 1;

@@ -29,5 +29,8 @@
 #define _DEF_BUTTON1       0
 #define _DEF_BUTTON2       1
 
+#define _DEF_SWTIMER1      0
+#define _DEF_SWTIMER2      1
+
 
 #endif /* SRC_COMMON_DEF_H_ */

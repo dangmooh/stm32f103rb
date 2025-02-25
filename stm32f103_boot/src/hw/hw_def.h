@@ -17,7 +17,6 @@
 #define _USE_HW_RTC
 #define _USE_HW_RESET
 #define _USE_HW_FLASH
-#define _USE_HW_BUTTON
 
 #define _USE_HW_BUTTON
 #define      HW_BUTTON_MAX_CH       1
@@ -25,5 +24,7 @@
 #define _USE_HW_LED //LED를 사용할 것이고
 #define      HW_LED_MAX_CH          1 // led는 1개 사용한다
 
+#define _USE_HW_SW_TIMER
+#define      HW_SW_TIMER_MAX_CH      1
 
 #endif /* SRC_HW_HW_DEF_H_ */
