@@ -19,7 +19,7 @@
 #include "flash.h"
 #include "button.h"
 #include "swtimer.h"
-
+#include "timer.h"
 
 void hwInit(void);
 

@@ -43,7 +43,6 @@ int __io_putchar(int ch) // printf 호출 시 하나의 charactor를 보낸다.
 
 
 
-
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};

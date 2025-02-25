@@ -32,5 +32,15 @@
 #define _DEF_SWTIMER1      0
 #define _DEF_SWTIMER2      1
 
+#define _DEF_TIMER1        0
+#define _DEF_TIMER2        1
+#define _DEF_TIMER3        2
+#define _DEF_TIMER4        3
+
+#define _DEF_TIMER_CH1     0
+#define _DEF_TIMER_CH2     1
+#define _DEF_TIMER_CH3     2
+#define _DEF_TIMER_CH4     3
+
 
 #endif /* SRC_COMMON_DEF_H_ */

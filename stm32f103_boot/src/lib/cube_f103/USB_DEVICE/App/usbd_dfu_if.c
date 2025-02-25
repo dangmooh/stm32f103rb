@@ -174,7 +174,7 @@ uint16_t MEM_If_DeInit_FS(void)
   * @param  Add: Address of sector to be erased.
   * @retval 0 if operation is successful, MAL_FAIL else.
   */
-uint16_t MEM_If_Erase_FS(uint32_t Add) // sector 1개를 지운다.
+uint16_t MEM_If_Erase_FS(uint32_t Add)
 {
   /* USER CODE BEGIN 2 */
 

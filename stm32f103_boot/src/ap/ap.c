@@ -10,18 +10,16 @@
 
 
 
-void led_isr(void *arg)
+void led_isr(void)
 {
   ledToggle(_DEF_LED1);
 }
 
 void apInit(void)
 {
-  swtimer_handle_t h_led_timer;
-
-  h_led_timer = swtimerGetHandle();
-  swtimerSet(h_led_timer, 500, LOOP_TIME, led_isr, NULL);
-  swtimerStart(h_led_timer);
+  timerSetPeriod(_DEF_TIMER_CH1, 500*1000);
+  timerAttachInterrupt(_DEF_TIMER_CH1, led_isr);
+  timerStart(_DEF_TIMER_CH1);
 }
 
 // gcc 계열에서 printf 함수를 사용하려면 syscallback 추가하면 된다.
